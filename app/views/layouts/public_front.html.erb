@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>3d-efekt</title>
+    <%= stylesheet_link_tag    "styles", media: "all", "data-turbolinks-track" => true %>
+	<%= stylesheet_link_tag("application", media: "all", "data-turbolinks-track" => true)%>
+    <%= javascript_include_tag "application" %>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Arvo">
+</head>
+<body class="background_max">
+ 
+
+<%= render(:partial=>"navigation") %>
+ <div class="blue_bg">
+     
+     <div class="locale" style="display:none">
+         Język:
+         <%= link_to_unless_current "English", locale: "en" %>    <!-- <%= link_to_unless_current image_tag("english.jpg", alt: "#{t :english}"), locale: "en" %> <%= link_to_unless_current "#{t :english}", locale: "en" %>  -->
+         <%= link_to_unless_current "Polish", locale: "pl" %>
+     </div>
+<!--<%= render(:partial=>"sliderPartnership") %>-->
+
+
+<%= yield %>
+
+<%= render(:partial=>"footer") %>
+<script>
+    $( document ).ready(function() { 
+        
+        	$('.slider_partnership').bxSlider({
+                slideWidth: 8000,
+                        pager: false,
+                        adaptiveHeight: true,
+                        minSlides: 4,
+                        maxSlides: 4,
+                        moveSlides: 1,
+                        auto: true,
+                        speed: 1499,
+                        slideMargin: 8,
+                        pause: 2200
+                       });
+
+              // WINDOW SIZE FUNCTIONS
+		    var $window = $(window);
+		  
+		    function checkWidth() {
+		        var windowsize = $window.width();
+		        if (windowsize > 1299) {windowsize =1299.1}
+		        var flip = $('.square-box, .thumb');
+		        var p94 = (windowsize)*0.9199;
+		        var m6 = (windowsize)*0.08/8+'px';
+		
+		
+		        if (windowsize < 767) 
+		        {
+		        var width4 =((p94/2)+'px');
+		        var height4 = ((p94/2)*0.64)+'px';
+		
+		        flip.css({"width":width4,"height":height4,"margin":m6 });
+		        }
+		        else
+		        {
+		        var width4 =(((p94/4)-30)+'px');
+		        var height4 = ((p94/4)*0.64)+'px';
+		
+		        flip.css({"width":width4,"height":height4,"margin":m6 });
+		        }
+		    }
+		    checkWidth();
+		    $(window).resize(checkWidth);
+	$('.main_slider').bxSlider({
+                slideWidth: 8000,
+                        pager: false,
+                        adaptiveHeight: true,
+                        auto: true,
+                        speed: 1000,
+                        pause: 9000
+                       });
+                       
+    });
+
+            var changeClass = function (r,className1,className2) {
+                var regex = new RegExp("(?:^|\\s+)" + className1 + "(?:\\s+|$)");
+                if( regex.test(r.className) ) {
+                    r.className = r.className.replace(regex,' '+className2+' ');
+                }
+                else{
+                    r.className = r.className.replace(new RegExp("(?:^|\\s+)" + className2 + "(?:\\s+|$)"),' '+className1+' ');
+                }
+                return r.className;
+            };  
+
+            var menuElements = document.getElementById('menu');
+            menuElements.insertAdjacentHTML('afterBegin','<button type="button" id="menutoggle" class="navtoogle" aria-hidden="true"><i aria-hidden="true" class="icon-menu"> </i></button>');
+
+            //  Toggle the class on click to show / hide the menu
+            document.getElementById('menutoggle').onclick = function() {
+                changeClass(this, 'navtoogle active', 'navtoogle');
+
+                if ( $('.bx-wrapper .bx-next').css('visibility') == 'hidden' )
+                $('.bx-wrapper .bx-next').css('visibility','visible');
+                        else
+                $('.bx-wrapper .bx-next').css('visibility','hidden');
+
+            }
+
+            // http://tympanus.net/codrops/2013/05/08/responsive-retina-ready-menu/comment-page-2/#comment-438918
+            document.onclick = function(e) {
+                var mobileButton = document.getElementById('menutoggle'),
+                    buttonStyle =  mobileButton.currentStyle ? mobileButton.currentStyle.display : getComputedStyle(mobileButton, null).display;
+
+                if(buttonStyle === 'block' && e.target !== mobileButton && new RegExp(' ' + 'active' + ' ').test(' ' + mobileButton.className + ' ')) {
+                }
+            }
+            
+$(function() {
+	
+	
+$('.datepicker').datepicker();
+
+
+var el = '.flip_it';
+
+  $(el).flipper({
+    rotationType: 'left',
+    depth: 1100,
+    speed: 0.4
+  });
+});
+
+        $(".video_gallery").fitVids();
+        $(".video_gallery").fitVids({ customSelector: "iframe[src^='http://socialcam.com']"});
+
+</script>
+</div>
+</body>
+</html>

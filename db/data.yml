@@ -1,0 +1,250 @@
+
+---
+galleries:
+  columns:
+  - id
+  - name
+  - type_id
+  - link
+  - position
+  - img_file_name
+  - img_content_type
+  - img_file_size
+  - img_updated_at
+  - created_at
+  - updated_at
+  records: 
+  - - 1
+    - Pierwsze wydruki
+    - 1
+    - 
+    - 1
+    - s2.jpg
+    - image/jpeg
+    - 1040065
+    - 2015-03-17 17:58:11.000000000 Z
+    - 2015-03-17 17:57:00.000000000 Z
+    - 2015-03-17 17:58:36.000000000 Z
+
+---
+photos:
+  columns:
+  - id
+  - gallery_id
+  - name
+  - position
+  - img_file_name
+  - img_content_type
+  - img_file_size
+  - img_updated_at
+  - created_at
+  - updated_at
+  records: 
+  - - 1
+    - 1
+    - Materiały
+    - 1
+    - s3.jpg
+    - image/jpeg
+    - 180984
+    - 2015-03-17 18:02:55.000000000 Z
+    - 2015-03-17 18:02:00.000000000 Z
+    - 2015-03-17 18:02:56.000000000 Z
+  - - 2
+    - 1
+    - Eksperymenty
+    - 2
+    - s2.jpg
+    - image/jpeg
+    - 166323
+    - 2015-03-17 18:03:18.000000000 Z
+    - 2015-03-17 18:02:00.000000000 Z
+    - 2015-03-17 18:03:19.000000000 Z
+  - - 3
+    - 1
+    - Chaos twórczy
+    - 3
+    - s1.jpg
+    - image/jpeg
+    - 235211
+    - 2015-03-17 18:03:41.000000000 Z
+    - 2015-03-17 18:03:00.000000000 Z
+    - 2015-03-17 18:03:42.000000000 Z
+
+---
+posts:
+  columns:
+  - id
+  - name
+  - position
+  - text
+  - img_file_name
+  - img_content_type
+  - img_file_size
+  - img_updated_at
+  - file_file_name
+  - file_content_type
+  - file_file_size
+  - file_updated_at
+  - created_at
+  - updated_at
+  records: 
+  - - 6
+    - Czym jest druk 3D ?
+    - 1
+    - "Zakładając firmę 3D-Efekt wraz z moim kuzynem spotkaliśmy się z dużym entuzjazmem
+      tak samo jak z wieloma pytaniami:\r\n\r\n... ale jak to tak drukujecie przedmioty
+      ??\r\n\r\n... tak, ja wiem o co chodzi, drukujecie bilbordy i ulotki ??\r\n...
+      jak to, tak na kartce ??\r\n\r\nZ tego powodu, dla mniej wtajemniczonych zacznijmy
+      od teorii. \r\nPozwólcie, że posłużę się metaforą z branży budowlanej. Każdy
+      widział jak powstaje budynek. Wystarczy przespacerować się po mieście. \r\nArchitekt
+      przenosi konstrukcję z głowy do komputera za pomocą programów CAD. Na podstawie
+      tego tworzona jest dokumentacja  zrozumiała dla budowniczych, którzy wg otrzymanych
+      instrukcji stawiają budynek piętro po piętrze.\r\n\r\nDrukowanie w trzech wymiarach
+      działa na tej samej zasadzie.  My, czyli projektanci, tworzymy modele trójwymiarowe
+      używając oprogramowania CAD. W kolejnym kroku generujemy kod zrozumiały dla
+      drukarki wg którego ma zbudować dla nas model. Dobieramy materiał i parametry
+      jemu właściwe np. temperatura, prędkość wydruku, wysokość \"piętra\". Finalnie
+      uruchamiamy maszynę i cierpliwie czekamy aż wydruk będzie gotowy. \r\n\r\nDruk
+      3D ... ale jakie to ma zastosowanie ??\r\n\r\nNIEOGRANICZONE... no prawie, bo
+      ograniczenie stanowi tylko ludzka wyobraźnia i wymiary maszyny :) .\r\nDziś
+      drukarki 3D drukują nie tylko gadżety i spersonalizowane upominki. Pracują w
+      biurach projektowych umożliwiając konstruktorom szybkie zmaterializowanie swoich
+      projektów i ich ocenę. W medycynie drukuje się kości dostosowane do indywidualnego
+      pacjenta, również części do zastawek serca. Ortodonci drukują nowe zęby dla
+      tych, którzy przesadzili ze słodyczami :). Nawet astronauci pracujący na orbicie
+      mają drukarkę 3d. Niedawno wydrukowali sobie narzędzie, którego zapomnieli zabrać
+      z Ziemi. Nawiązując do metafory, którą posłużyłem się na początku, Chińczycy
+      drukują domy, tak prawdziwe domy, ale na razie bez mebli :).\r\n"
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 2015-03-14 10:09:21.000000000 Z
+    - 2015-03-14 10:10:30.000000000 Z
+  - - 8
+    - Polacy w Świecie 3D
+    - 2
+    - "Drukowanie 3d, które na zachodzie zdobywa coraz większe uznanie, w Polsce dopiero
+      raczkuje, ale ...\r\n... czy wiecie, że?\r\nPolska jest poważnym zawodnikiem
+      na międzynarodowym rynku drukarek 3d. Firmy ZORTRAX (z Olsztyna), HBOT (z Wrocławia)
+      \ czy ZMORPH (również z Wrocławia) są na to najlepszym przykładem.\r\nDziś zatrzymajmy
+      się na ZORTRAX'ie. W 2013 roku, raczkując jeszcze na Kickstarterze został dostrzeżony
+      przez giganta z Doliny Krzemowej - firmę Dell,  która złożyła zamówienie na
+      5000 drukarek. Mają one pracować u boku projektantów Dell'a jako narzędzie ułatwiające
+      projektowanie.\r\nPolscy dziennikarze nazwali firmę \"Apple w świecie druku
+      3d\". ZORTRAX jest postrzegany przez zagraniczne media jako główny konkurent
+      MAKERBOT'a  - amerykańskiego producenta drukarek 3d uchodzącego za jednego z
+      głównych potentatów z branży, który wypuścił na rynek już kilka modeli ( ZORTRAX
+      w roku 2015 planuje przedstawić nam swój drugi model ). \r\nTrzymamy kciuki
+      za naszych rodaków!\r\n\r\n\r\n(zdjęcie: założyciele ZORTRAX'a : Rafal Tomasiak
+      (w okularach), Karolina Bołądź, Tomasz Drosio. Photo by Rafal Siderski)"
+    - sr_20140129_388ok-copy-1024x725.jpg
+    - image/jpeg
+    - 124728
+    - 2015-03-23 11:03:30.000000000 Z
+    - 
+    - 
+    - 
+    - 
+    - 2015-03-23 11:03:31.000000000 Z
+    - 2015-03-23 11:03:31.000000000 Z
+
+---
+sliders:
+  columns:
+  - id
+  - name
+  - position
+  - img_file_name
+  - img_content_type
+  - img_file_size
+  - img_updated_at
+  - created_at
+  - updated_at
+  records: 
+  - - 9
+    - ''
+    - 1
+    - slider_0.jpg
+    - image/jpeg
+    - 207972
+    - 2015-03-13 21:22:00.000000000 Z
+    - 2015-03-13 21:22:02.000000000 Z
+    - 2015-03-13 21:22:02.000000000 Z
+  - - 13
+    - Mamy na to pomysł ...
+    - 3
+    - slider_2.jpg
+    - image/jpeg
+    - 162940
+    - 2015-03-13 21:31:31.000000000 Z
+    - 2015-03-13 21:31:31.000000000 Z
+    - 2015-03-13 21:49:27.000000000 Z
+  - - 14
+    - Projektujemy i ...
+    - 4
+    - slider_3.jpg
+    - image/jpeg
+    - 257505
+    - 2015-03-13 21:39:14.000000000 Z
+    - 2015-03-13 21:39:15.000000000 Z
+    - 2015-03-13 21:48:32.000000000 Z
+  - - 16
+    - "... drukujemy w TRZECH WYMIARACH !!!"
+    - 5
+    - SLIDER4.jpg
+    - image/jpeg
+    - 204231
+    - 2015-03-13 21:46:57.000000000 Z
+    - 2015-03-13 21:46:58.000000000 Z
+    - 2015-03-13 21:48:54.000000000 Z
+  - - 17
+    - 'Zastanawiasz się skąd wziąć zamiennik dla uszkodzonej części ? '
+    - 2
+    - slider1.jpg
+    - image/jpeg
+    - 196535
+    - 2015-03-13 21:53:00.000000000 Z
+    - 2015-03-13 21:53:01.000000000 Z
+    - 2015-03-13 21:53:01.000000000 Z
+
+---
+types:
+  columns:
+  - id
+  - name
+  - position
+  - created_at
+  - updated_at
+  records: 
+  - - 1
+    - Tutaj dodawaj kolejne galerie!
+    - 1
+    - 2015-03-17 17:56:00.000000000 Z
+    - 2015-03-17 17:57:16.000000000 Z
+
+---
+users:
+  columns:
+  - id
+  - name
+  - surname
+  - user
+  - email
+  - password_digest
+  - created_at
+  - updated_at
+  records: 
+  - - 1
+    - Mikołaj
+    - Mirski
+    - admin
+    - mikolak@o2.pl
+    - "$2a$10$hezM8JlJsbHkYoRvMzUfA..ugCunA0VFKJtdz3mYtW8Imm2J6OsrO"
+    - 2015-03-04 15:19:35.000000000 Z
+    - 2015-03-04 15:19:35.000000000 Z

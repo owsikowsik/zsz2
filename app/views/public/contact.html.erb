@@ -1,0 +1,64 @@
+<div class="contains">
+    <div class="post">
+        <div class="kont"> 
+            <h2>Kontakt</h2>
+            <div class="kontakt">
+                <h4>Siedziba firmy</h4>
+                <p>Rynek 32A/6</p>
+                <p>64-000 Kościan</p>
+            </div>   
+    
+            <div class="kontakt">
+                <h4>Dane kontaktowe</h4>
+                <p>+48 606 405 047    <span style="margin: 20px">karol.frackowiak@3d-efekt.pl</span></p>
+                <p>+48 727 929 950    <span style="margin: 25px">mikolaj.mirski@3d-efekt.pl</span></p>
+                
+            </div>
+           
+        </div>
+         
+        <div class="kont">
+            <img class="img-responsive" src="/assets/DSC06598_1.jpg"  />
+            
+        </div>
+        <div style="clear:both"></div>
+    </div>
+    
+    
+</div>
+
+
+<div class="contains"> 
+
+  	<% if !flash[:notice].blank? %>
+  		<div class="alert alert-success" style='text-align :center; width:99%; margin:20px auto; border 2px solid #19873E' id="main" data-anijs="if: load, on: window, do: swing animated">
+  			<%= flash[:notice] %>
+  		</div>
+    <% end %>
+
+    <div class="post">
+        <h2>Napisz do nas</h2>
+        <%= form_tag({:controller => 'public', :action => 'contact_form'}) do %>
+            <div class="form-group">
+                <%= label_tag 'name', 'Imię' %>
+                <%= text_field_tag 'name', nil, class: 'form-control', placeholder: 'Imię', :required => true %>
+            </div>
+            <div class="form-group">
+                <%= label_tag 'surname', 'Nazwisko' %>
+                <%= text_field_tag 'surname', nil, class: 'form-control', placeholder: 'Nazwisko', :required => true %>
+            </div>
+           <div class="form-group">
+               <%= label_tag 'email', 'Email' %>
+               <%= email_field_tag 'email', nil, class: 'form-control', placeholder: 'Twój Addres Email', :required => true %>
+           </div>
+           <div class="form-group">
+               <%= label_tag 'comments', 'Treść' %>
+               <%= text_area_tag 'comments', nil, class: 'form-control', rows: 4,:required => true, placeholder: 'Treść zapytania...' %>
+           </div>
+           <%= submit_tag nil, class: 'btn btn-default pull-right' %>
+       <% end %>
+    </div> 
+</div>    
+
+
+<script src="http://anijs.github.io/lib/anijs/anijs-min.js"></script> 

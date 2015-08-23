@@ -1,0 +1,10 @@
+pl:
+    about: "O nas"
+    offer: "Oferta"
+    gallery: "Galeria"
+    contact: "Kontakt"
+            
+            
+    public:
+        index:
+            hello: "polski test"

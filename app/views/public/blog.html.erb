@@ -1,0 +1,38 @@
+<% if !@post.blank? %>
+<div class="new_part">
+    <h2>Aktualności</h2>
+</div>
+
+<div class="contains">
+
+
+<% @post.each do |posts| %>
+	<div class="post">
+	
+        <h3 class="post_head"><%= posts.name %></h3>
+				<% if !posts.img.blank? %>
+					<p>
+						<%= image_tag(posts.img.url, :class => "img-responsive img_border") %>
+						<%= raw(posts.text) %>
+					</p>	
+						<% if !posts.file.blank? %>
+							<div class="wprawo">
+								
+								<%= link_to " Pobierz", posts.file.url(:original, false), :class=>"btn btn-default glyphicon glyphicon-circle-arrow-down " %>
+							</div>	
+						<% end %>
+
+				<% else %>
+					<%= raw(posts.text) %>
+
+						<% if !posts.file.blank? %>
+							<div class="wprawo">
+								<%= link_to " Pobierz", posts.file.url(:original, false), :class=>"btn btn-default glyphicon glyphicon-circle-arrow-down " %>	
+							</div>
+						<% end %>			
+				<% end %>
+			</div>
+
+    <% end %>
+    </div>
+<% end %>

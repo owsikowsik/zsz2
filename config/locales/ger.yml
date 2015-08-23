@@ -1,0 +1,6 @@
+ger:
+    about: "Polski test"
+            
+    public:
+        index:
+            hello: "polski test"

@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+  <head>
+      <%= stylesheet_link_tag    "styles", media: "all", "data-turbolinks-track" => true %>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <body>
+        <p>Otrzymano zapytanie od: <%= @name+" "+@surname %></p>
+        <p>O adresie mailowym: <%= @email %></p>
+        <hr></hr>
+        <p><%= @body %></p>
+    </body>
+  </body>
+</html>

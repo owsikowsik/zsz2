@@ -1,0 +1,55 @@
+
+html{
+	font-size: 62.5%;     /*równowartosc 10px*/
+}  
+
+
+
+footer{
+	background-color: #404040;
+	margin-bottom: 0px;
+	color: #ffffff;
+	text-align: center;
+	padding-bottom: 12px;
+}
+footer a{
+    color: white;   
+}
+footer a:hover {
+    color: white;
+    text-decoration: none;
+    
+}
+.lewa{
+	text-align: left;
+}
+p .fa{
+	letter-spacing: 70px;
+
+}
+
+#mycrawler2 img{
+	height: 200px;
+}
+
+#poruszanie {
+	width: 100%;
+	position: relative;
+	height: 30rem;
+	background-color: red;
+}
+#movieelem{
+	position: absolute;
+}
+
+.kont {
+    float: left;
+    width: 50%;
+    position: relative;
+   
+    
+}
+
+.kontakt{
+    font-family: 'Arvo', Arial, sans-serif;
+}

@@ -1,0 +1,112 @@
+
+<div class="new_part"><h2>
+Nasze Prace
+<%= link_to("", {:controller => 'public', :action => 'index'} , :class => "back_button iconn-arrow-left") %>
+</h2>
+
+</div>
+
+		<div data-no-turbolink class="container_max">
+
+			<section>
+				<div class="tabs tabs-style-bar">
+					<nav>
+						<ul>
+							<li><p><a href="#section-bar-1" class="icon icon-camera"><span>Zdjęcia</span></a></p></li>
+<!--							<li><a href="#section-bar-2" class="icon icon-camera"><span>Eventy</span></a></li>
+							<li><a href="#section-bar-3" class="icon icon-camera"><span>Wynajem domków</span></a></li>-->
+							<li><a href="#section-bar-4" class="icon iconn-video-camera"><span>Filmy</span></a></li> 
+
+						</ul>
+					</nav>
+					<div class="content-wrap">
+						<section id="section-bar-1">      
+            		          <% if !@zdjecia.blank? %>
+            		          <div class="align_center">
+                                    <% @zdjecia.each do |gallery| %>
+                                    
+                                        <div class="gallery">
+                                    
+                                                <%= link_to({:action => 'photos', :gallery_id => gallery.id}) do %>
+                
+                                                        <p><%= gallery.name %></p>
+                                                        <%= image_tag(gallery.img.url, :class => "img-responsive") %>
+                    
+                                                <% end %>
+                                        </div>
+                                    <% end %>
+                                    </div>
+                                <% end %>
+						
+						</section>
+<!--						<section id="section-bar-2">
+						            		          <% if !@eventy.blank? %>
+            		          <div class="align_center">
+                                    <% @eventy.each do |gallery| %>
+                                    
+                                        <div class="gallery">
+                                    
+                                                <%= link_to({:action => 'photos', :gallery_id => gallery.id}) do %>
+                
+                                                        <p><%= gallery.name %></p>
+                                                        <%= image_tag(gallery.img.url, :class => "img-responsive") %>
+                    
+                                                <% end %>
+                                        </div>
+                                    <% end %>
+                                    </div>
+                                <% end %>
+						</section>
+						<section id="section-bar-3">
+				          		<% if !@domki.blank? %>
+	            		          <div class="align_center">
+	                                    <% @domki.each do |gallery| %>
+	                                    
+	                                        <div class="gallery">
+	                                    
+	                                                <%= link_to({:action => 'photos', :gallery_id => gallery.id}) do %>
+	                
+	                                                        <p><%= gallery.name %></p>
+	                                                        <%= image_tag(gallery.img.url, :class => "img-responsive") %>
+	                    
+	                                                <% end %>
+	                                        </div>
+	                                    <% end %>
+	                                    </div>
+	                                <% end %>
+						</section>-->
+						<section id="section-bar-4">
+							<% if !@movies.blank? %>
+	            		          <div class="align_center">
+	                                    <% @movies.sort.each do |movie| %>
+
+		                                        <div class="video_gallery">
+		                                    
+		                                                  <p><%= movie.name %></p>
+															<%= raw(movie.link) %>
+		                                        </div>
+	                                     
+	                                    <% end %>
+	                                    </div>
+	                         <% else %>
+	                                <p>Brak filmów</p>
+	                         <% end %>
+
+						</section>
+
+					</div>
+				</div>
+			</section>
+
+	
+</div>
+
+		<script>
+			(function() {
+
+				[].slice.call( document.querySelectorAll( '.tabs' ) ).forEach( function( el ) {
+					new CBPFWTabs( el );
+				});
+
+			})();
+		</script>

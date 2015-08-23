@@ -1,0 +1,91 @@
+<div class="new_part">
+      <h2><i aria-hidden="true" class="icon-camera"></i> <%= @photo.name %>
+	  <%= link_to("", {:controller => 'public', :action => 'gallery'} , :class => "back_button iconn-arrow-left") %>
+	  </h2>
+</div>
+
+<div class="contains">
+<div class="photos">
+    <div id="basicExample">
+    	<% @photo.photos.order('position DESC').each do |pictures| %>
+        	<a href="<%= pictures.img.url %>" title="<%= pictures.name %>">
+				<%= image_tag(pictures.img.url) %>
+			</a>
+			<% end %>
+			
+        <a href="/assets/jarmark1.jpg">
+            <img src="/assets/jarmark1.jpg">
+        </a>
+        <a href="/assets/jarmark2.jpg">
+            <img src="/assets/piernik.jpg">
+        </a>
+        <a href="/assets/jarmark3.jpg">
+            <img src="/assets/jarmark3.jpg">
+        </a>
+
+        <a href="/assets/jarmark2.jpg">
+            <img src="/assets/piec.jpg">
+        </a>
+        <a href="/assets/jarmark3.jpg">
+            <img src="/assets/jarmark3.jpg">
+        </a>
+        <a href="/assets/jarmark4.jpg">
+            <img src="/assets/domek.jpg">
+
+        <a href="/assets/jarmark2.jpg">
+            <img src="/assets/kanapa.jpg">
+        </a>
+        <a href="/assets/jarmark3.jpg">
+            <img src="/assets/targi.jpg">
+        </a>
+        <a href="/assets/jarmark4.jpg">
+            <img src="/assets/desert.jpg">
+        </a>
+            <a href="/assets/jarmark1.jpg">
+            <img src="/assets/jarmark1.jpg">
+        </a>
+        <a href="/assets/jarmark2.jpg">
+            <img src="/assets/jarmark2.jpg">
+        </a>
+        <a href="/assets/jarmark3.jpg">
+            <img src="/assets/jarmark3.jpg">
+        </a>
+        <a href="/assets/jarmark4.jpg">
+            <img src="/assets/krolik.jpg">
+        </a>
+            <a href="/assets/jarmark4.jpg">
+            <img src="/assets/jarmark4.jpg">
+        </a>
+            <a href="/assets/jarmark1.jpg">
+            <img src="/assets/jarmark1.jpg">
+        </a>
+        <a href="/assets/jarmark2.jpg">
+            <img src="/assets/beach.jpg">
+        </a>
+        <a href="/assets/jarmark3.jpg">
+            <img src="/assets/jarmark3.jpg">
+        </a>
+        <a href="/assets/jarmark3.jpg">
+            <img src="/assets/bali.jpg">
+        </a>
+        <a href="/assets/jarmark4.jpg">
+            <img src="/assets/jarmark4.jpg">
+        </a>
+    </div>
+
+</div>
+  </div>
+
+</div>
+
+
+<script>
+$("#basicExample").justifiedGallery({
+    lastRow : 'nojustify', 
+    rowHeight : 140, 
+    rel : 'gallery2',
+    margins : 12
+}).on('jg.complete', function () {
+    $('#basicExample a').swipebox();
+});
+</script>
